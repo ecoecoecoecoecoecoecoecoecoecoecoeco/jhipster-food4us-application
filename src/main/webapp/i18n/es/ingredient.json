@@ -1,0 +1,26 @@
+{
+  "food4UsApp": {
+    "ingredient": {
+      "home": {
+        "title": "Ingredients",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Ingredient",
+        "createOrEditLabel": "Crear o editar Ingredient",
+        "notFound": "Ningún Ingredients encontrado"
+      },
+      "created": "Un nuevo Ingredient ha sido creado con el identificador {{ param }}",
+      "updated": "Un Ingredient ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Ingredient ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Ingredient {{ id }}?"
+      },
+      "detail": {
+        "title": "Ingredient"
+      },
+      "id": "ID",
+      "name": "Name",
+      "quantity": "Quantity",
+      "recipe": "Recipe"
+    }
+  }
+}

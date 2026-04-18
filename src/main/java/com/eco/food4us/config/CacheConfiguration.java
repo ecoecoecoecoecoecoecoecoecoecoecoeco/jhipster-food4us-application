@@ -44,6 +44,17 @@ public class CacheConfiguration {
             createCache(cm, com.eco.food4us.domain.User.class.getName());
             createCache(cm, com.eco.food4us.domain.Authority.class.getName());
             createCache(cm, com.eco.food4us.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.eco.food4us.domain.UserProfile.class.getName());
+            createCache(cm, com.eco.food4us.domain.UserProfile.class.getName() + ".allergyIntolerances");
+            createCache(cm, com.eco.food4us.domain.Warehouse.class.getName());
+            createCache(cm, com.eco.food4us.domain.Product.class.getName());
+            createCache(cm, com.eco.food4us.domain.Recipe.class.getName());
+            createCache(cm, com.eco.food4us.domain.Recipe.class.getName() + ".ingredients");
+            createCache(cm, com.eco.food4us.domain.Ingredient.class.getName());
+            createCache(cm, com.eco.food4us.domain.Supplier.class.getName());
+            createCache(cm, com.eco.food4us.domain.DietaryEntry.class.getName());
+            createCache(cm, com.eco.food4us.domain.AllergyIntolerance.class.getName());
+            createCache(cm, com.eco.food4us.domain.AllergyIntolerance.class.getName() + ".userProfiles");
             // jhipster-needle-ehcache-add-entry
         };
     }

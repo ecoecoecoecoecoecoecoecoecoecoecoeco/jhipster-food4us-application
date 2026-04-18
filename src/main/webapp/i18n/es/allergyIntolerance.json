@@ -1,0 +1,26 @@
+{
+  "food4UsApp": {
+    "allergyIntolerance": {
+      "home": {
+        "title": "Allergy Intolerances",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Allergy Intolerance",
+        "createOrEditLabel": "Crear o editar Allergy Intolerance",
+        "notFound": "Ningún Allergy Intolerances encontrado"
+      },
+      "created": "Un nuevo Allergy Intolerance ha sido creado con el identificador {{ param }}",
+      "updated": "Un Allergy Intolerance ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Allergy Intolerance ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Allergy Intolerance {{ id }}?"
+      },
+      "detail": {
+        "title": "Allergy Intolerance"
+      },
+      "id": "ID",
+      "type": "Type",
+      "description": "Description",
+      "userProfile": "User Profile"
+    }
+  }
+}

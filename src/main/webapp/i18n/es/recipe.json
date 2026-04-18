@@ -1,0 +1,28 @@
+{
+  "food4UsApp": {
+    "recipe": {
+      "home": {
+        "title": "Recipes",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Recipe",
+        "createOrEditLabel": "Crear o editar Recipe",
+        "notFound": "Ningún Recipes encontrado"
+      },
+      "created": "Un nuevo Recipe ha sido creado con el identificador {{ param }}",
+      "updated": "Un Recipe ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Recipe ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Recipe {{ id }}?"
+      },
+      "detail": {
+        "title": "Recipe"
+      },
+      "id": "ID",
+      "name": "Name",
+      "description": "Description",
+      "preparationTime": "Preparation Time",
+      "calories": "Calories",
+      "ingredient": "Ingredient"
+    }
+  }
+}

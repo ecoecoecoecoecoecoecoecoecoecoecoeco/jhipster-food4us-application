@@ -1,0 +1,12 @@
+{
+  "food4UsApp": {
+    "AllergyIntoleranceType": {
+      "null": "",
+      "LACTOSE": "LACTOSE",
+      "GLUTEN": "GLUTEN",
+      "NUTS": "NUTS",
+      "SEAFOOD": "SEAFOOD",
+      "OTHER": "OTHER"
+    }
+  }
+}

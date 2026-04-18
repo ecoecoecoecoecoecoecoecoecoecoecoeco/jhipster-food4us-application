@@ -1,0 +1,132 @@
+
+application {
+  config {
+    baseName food4us
+    applicationType monolith
+    packageName com.eco.food4us
+    authenticationType jwt
+    prodDatabaseType mysql
+    clientFramework react
+  }
+  entities *
+}
+
+// ===================================================================
+// Enums
+// ===================================================================
+
+enum UserType {
+  DOMESTIC,
+  PROFESSIONAL
+}
+
+enum WarehouseType {
+  COLD,
+  DRY
+}
+
+enum SupplierType {
+  SUPERMARKET,
+  FREELANCE
+}
+
+enum AllergyIntoleranceType {
+  LACTOSE,
+  GLUTEN,
+  NUTS,
+  SEAFOOD,
+  OTHER
+}
+
+// ===================================================================
+// Entities
+// ===================================================================
+
+entity UserProfile {
+  userType UserType required
+}
+
+entity Warehouse {
+  name     String      required minlength(2) maxlength(100),
+  location String      maxlength(200),
+  type     WarehouseType required
+}
+
+entity Product {
+  name           String     required minlength(2) maxlength(150),
+  qrCode         String     maxlength(50),
+  barCode        String     maxlength(50),
+  expirationDate LocalDate,
+  quantity       Integer    required min(0),
+  purchasePrice  BigDecimal min(0),
+  purchaseDate   LocalDate
+}
+
+entity Recipe {
+  name            String   required minlength(2) maxlength(150),
+  description     TextBlob,
+  preparationTime Integer  min(0),
+  calories        Integer  min(0)
+}
+
+entity Ingredient {
+  name     String required minlength(2) maxlength(100),
+  quantity String required maxlength(50)
+}
+
+entity Supplier {
+  name         String       required minlength(2) maxlength(150),
+  address      String       required maxlength(300),
+  contact      String       maxlength(100),
+  website      String       maxlength(200),
+  supplierType SupplierType
+}
+
+entity DietaryEntry {
+  consumptionDate LocalDate required,
+  consumptionTime LocalTime required,
+  quantity        Integer   required min(1)
+}
+
+entity AllergyIntolerance {
+  type        AllergyIntoleranceType required,
+  description String                 maxlength(300)
+}
+
+// ===================================================================
+// Relationships
+// ===================================================================
+
+relationship OneToOne {
+  UserProfile{internalUser(login)} to User with builtInEntity
+}
+
+relationship ManyToOne {
+  Warehouse{userProfile}            to UserProfile,
+  Supplier{userProfile}             to UserProfile,
+  Product{warehouse(name) required} to Warehouse,
+  Product{supplier(name)}           to Supplier,
+  DietaryEntry{userProfile required} to UserProfile,
+  DietaryEntry{product(name) required} to Product
+}
+
+relationship OneToMany {
+  Recipe{ingredient} to Ingredient{recipe(name) required}
+}
+
+relationship ManyToMany {
+  UserProfile{allergyIntolerance} to AllergyIntolerance{userProfile}
+}
+
+// ===================================================================
+// Options
+// ===================================================================
+
+paginate Product, Recipe, Supplier, DietaryEntry, AllergyIntolerance, Warehouse with pagination
+
+service UserProfile, Warehouse, Product, Recipe, Ingredient, Supplier, DietaryEntry, AllergyIntolerance with serviceClass
+
+dto UserProfile, Warehouse, Product, Recipe, Ingredient, Supplier, DietaryEntry, AllergyIntolerance with mapstruct
+
+filter Product, Warehouse, Supplier, DietaryEntry
+

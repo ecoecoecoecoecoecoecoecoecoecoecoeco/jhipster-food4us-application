@@ -1,0 +1,28 @@
+{
+  "food4UsApp": {
+    "dietaryEntry": {
+      "home": {
+        "title": "Dietary Entries",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Dietary Entry",
+        "createOrEditLabel": "Crear o editar Dietary Entry",
+        "notFound": "Ningún Dietary Entries encontrado"
+      },
+      "created": "Un nuevo Dietary Entry ha sido creado con el identificador {{ param }}",
+      "updated": "Un Dietary Entry ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Dietary Entry ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Dietary Entry {{ id }}?"
+      },
+      "detail": {
+        "title": "Dietary Entry"
+      },
+      "id": "ID",
+      "consumptionDate": "Consumption Date",
+      "consumptionTime": "Consumption Time",
+      "quantity": "Quantity",
+      "userProfile": "User Profile",
+      "product": "Product"
+    }
+  }
+}

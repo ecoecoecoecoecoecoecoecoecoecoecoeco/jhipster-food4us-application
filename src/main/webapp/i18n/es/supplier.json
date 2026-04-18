@@ -1,0 +1,29 @@
+{
+  "food4UsApp": {
+    "supplier": {
+      "home": {
+        "title": "Suppliers",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Supplier",
+        "createOrEditLabel": "Crear o editar Supplier",
+        "notFound": "Ningún Suppliers encontrado"
+      },
+      "created": "Un nuevo Supplier ha sido creado con el identificador {{ param }}",
+      "updated": "Un Supplier ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Supplier ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Supplier {{ id }}?"
+      },
+      "detail": {
+        "title": "Supplier"
+      },
+      "id": "ID",
+      "name": "Name",
+      "address": "Address",
+      "contact": "Contact",
+      "website": "Website",
+      "supplierType": "Supplier Type",
+      "userProfile": "User Profile"
+    }
+  }
+}
