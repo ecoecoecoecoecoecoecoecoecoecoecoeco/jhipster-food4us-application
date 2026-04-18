@@ -1,0 +1,2 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    com.eco.food4us.config.SqlTestContainersSpringContextCustomizerFactory
