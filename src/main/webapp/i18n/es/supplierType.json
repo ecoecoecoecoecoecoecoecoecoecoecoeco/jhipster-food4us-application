@@ -1,0 +1,9 @@
+{
+  "food4UsApp": {
+    "SupplierType": {
+      "null": "",
+      "SUPERMARKET": "SUPERMARKET",
+      "FREELANCE": "FREELANCE"
+    }
+  }
+}

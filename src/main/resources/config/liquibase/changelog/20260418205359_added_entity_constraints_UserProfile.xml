@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity UserProfile.
+    -->
+    <changeSet id="20260418205359-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="internal_user_id"
+                                 baseTableName="user_profile"
+                                 constraintName="fk_user_profile__internal_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="user_profile_id"
+                                 baseTableName="rel_user_profile__allergy_intolerance"
+                                 constraintName="fk_rel_user_profile__allergy_intolerance__user_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="user_profile"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="allergy_intolerance_id"
+                                 baseTableName="rel_user_profile__allergy_intolerance"
+                                 constraintName="fk_rel_user_profile__allergy_intolerance__allergy_intolerance_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="allergy_intolerance"
+                                 />
+    </changeSet>
+</databaseChangeLog>

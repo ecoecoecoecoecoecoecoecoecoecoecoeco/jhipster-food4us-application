@@ -1,0 +1,9 @@
+{
+  "food4UsApp": {
+    "WarehouseType": {
+      "null": "",
+      "COLD": "COLD",
+      "DRY": "DRY"
+    }
+  }
+}

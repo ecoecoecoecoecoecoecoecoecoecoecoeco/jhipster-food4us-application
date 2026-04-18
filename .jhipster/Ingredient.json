@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20260418205403"
+  },
+  "applications": ["food4us"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "name": "Ingredient",
+  "relationships": [
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "recipe",
+      "otherEntityRelationshipName": "ingredient",
+      "relationshipName": "recipe",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

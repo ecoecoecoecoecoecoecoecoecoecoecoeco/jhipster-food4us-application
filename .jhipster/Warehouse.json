@@ -1,0 +1,41 @@
+{
+  "annotations": {
+    "changelogDate": "20260418205400"
+  },
+  "applications": ["food4us"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength", "maxlength"],
+      "fieldValidateRulesMaxlength": "100",
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String",
+      "fieldValidateRules": ["maxlength"],
+      "fieldValidateRulesMaxlength": "200"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "WarehouseType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "COLD,DRY"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Warehouse",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "userProfile",
+      "relationshipName": "userProfile",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}

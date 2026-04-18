@@ -11,7 +11,7 @@
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./build/h2db/testdb/food4us;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:file:./build/h2db/testdb/food4us;DB_CLOSE_DELAY=-1;MODE=MYSQL
     username: food4us
     password:
     hikari:

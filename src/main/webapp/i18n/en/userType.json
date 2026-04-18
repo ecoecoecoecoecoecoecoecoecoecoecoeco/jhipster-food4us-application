@@ -1,0 +1,9 @@
+{
+  "food4UsApp": {
+    "UserType": {
+      "null": "",
+      "DOMESTIC": "DOMESTIC",
+      "PROFESSIONAL": "PROFESSIONAL"
+    }
+  }
+}

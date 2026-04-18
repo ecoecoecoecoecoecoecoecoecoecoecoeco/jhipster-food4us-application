@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20260418205359"
+  },
+  "applications": ["food4us"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "userType",
+      "fieldType": "UserType",
+      "fieldValidateRules": ["required"],
+      "fieldValues": "DOMESTIC,PROFESSIONAL"
+    }
+  ],
+  "name": "UserProfile",
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "internalUser",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one",
+      "relationshipWithBuiltInEntity": true
+    },
+    {
+      "otherEntityName": "allergyIntolerance",
+      "otherEntityRelationshipName": "userProfile",
+      "relationshipName": "allergyIntolerance",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceClass"
+}
